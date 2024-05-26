@@ -1,51 +1,61 @@
 ---
-layout: project
-title: "Differentiable Imaging: a new tool for computational optical imaging"
+# title: "Differentiable Imaging: a new tool for computational optical imaging"
+# date: "`r Sys.Date()`"
+output:
+  # word_document: default
+  # pdf_document:
+  #   latex_engine: pdflatex
+  # md_document:
+  #   variant: markdown_github
+  html_document:
+    toc: true
+    pandoc_args: [
+      "--number-sections",
+      "--number-offset=1"
+    ]
+    toc_float: true
+    code_folding: show
+    number_sections: true
+bibliography: pub.bib
+link-citations: true
+csl: optics-express.csl
 ---
 
-<h2 class="section-title">Differentiable Imaging ($\partial \mathcal{I}$): a new tool for computational optical imaging </h2>
-<h5 class="pubname"> Advanced Physics Research, 2023 </h5>
+<center>
 
-<nav class="text-center" style="width: 100%">
-  <a href="https://ni-chen.github.io/" class="author">Ni Chen <sup>1</sup></a>
-  <a href="http://www.holoddd.com/" class="author">Liangcai Cao <sup>2</sup></a>
-  <a href="https://sites.google.com/vt.edu/oshandholographiclab/" class="author"> T.-C. Poon <sup>3</sup> </a>
-  <a href="http://oeqelab.snu.ac.kr/PROF" class="author"> Byoungho Lee <sup>4</sup> </a>
-  <a href="https://www.eee.hku.hk/~elam/" class="author"> Edmund Y. Lam <sup>5</sup></a>
-</nav>
+# Differentiable Imaging: a new tool for computational optical imaging {.unnumbered}
 
-<nav>
- <sup>1</sup> University of Arizona;
+Advanced Physics Research, 2023
 
- <sup>2</sup> Tsinghua University;
+<a href="https://ni-chen.github.io/" class="author">Ni Chen</a><sup>1</sup>, <a href="http://www.holoddd.com/" class="author">Liangcai Cao</a><sup>2</sup>, <a href="https://sites.google.com/vt.edu/oshandholographiclab/" class="author">T.-C. Poon</a><sup>3</sup>, <a href="http://oeqelab.snu.ac.kr/PROF" class="author">Byoungho Lee</a><sup>4</sup>, <a href="https://www.eee.hku.hk/~elam/" class="author">Edmund Y. Lam</a><sup>5</sup>
 
- <sup>3</sup> Virginia Tech;
+<sup>1</sup> University of Arizona;
 
- <sup>4</sup> Seoul National University;
+<sup>2</sup> Tsinghua University;
 
- <sup>5</sup> The University of Hong Kong;
-</nav>
+<sup>3</sup> Virginia Tech;
 
+<sup>4</sup> Seoul National University;
 
-* TOC
-{:toc}
---------
+<sup>5</sup> The University of Hong Kong;
 
+</center>
 
+</br>
 
-Computational imaging has made significant advancements in recent years, but faces limitations due to the restrictions imposed by traditional computational techniques. Differentiable programming offers a promising solution by combining the strengths of classical optimization and deep learning. By integrating physics into the modeling process, **differentiable imaging ($\partial \mathcal{I}$)** [[2](https://github.com/ni-chen/Differentiable-Imaging/blob/master/code/tutorial.ipynb)] - which employs differentiable programming in computational imaging - has the potential to overcome challenges posed by sparse, incomplete, and noisy data. This could be a key factor in advancing the field of computational imaging and its various applications.
+Computational imaging has made significant advancements in recent years, but faces limitations due to the restrictions imposed by traditional computational techniques. Differentiable programming offers a promising solution by combining the strengths of classical optimization and deep learning. By integrating physics into the modeling process, **differentiable imaging** [@Chen2023APR] - which employs differentiable programming in computational imaging - has the potential to overcome challenges posed by sparse, incomplete, and noisy data. This could be a key factor in advancing the field of computational imaging and its various applications.
 
-Modeling the physics accurately is of great importance in differentiable imaging. Since many computational imaging techniques rely on ray tracing and diffraction [[6](https://opg.optica.org/oe/fulltext.cfm?uri=oe-30-21-37727&id=507396)], we have developed both a **ray-tracing differentiable framework**  [[4](https://ieeexplore.ieee.org/abstract/document/9919421)] and a **diffraction-based differentiable framework** [[3](https://repository.kaust.edu.sa/handle/10754/679652)]. These frameworks have applications in self-calibration [[4](https://ieeexplore.ieee.org/abstract/document/9919421)], end-to-end lens design [[4](https://ieeexplore.ieee.org/abstract/document/9919421)], metrology [[5](https://opg.optica.org/oe/fulltext.cfm?uri=oe-29-19-30284&id=458455)], holography ($\partial \mathcal{H}$) [[3](https://repository.kaust.edu.sa/handle/10754/679652)], and more. The differentiable ray-tracing framework has proven to be highly efficient and enables easy incorporation of neural networks, thereby promoting lens design [[7](https://arxiv.org/abs/2302.01089)].
+Modeling the physics accurately is of great importance in differentiable imaging. Since many computational imaging techniques rely on ray tracing and diffraction [@Chen2022OE], we have developed both a **ray-tracing differentiable framework** [@Wang2022TCI] and a **diffraction-based differentiable framework** [@Chen2023LPOR]. These frameworks have applications in self-calibration, end-to-end lens design [@Wang2022TCI], metrology [@Wang2021OE], holography ($\partial {H}$) [@Chen2023LPOR,@Wu2023DH], Phase Retrieval [@JWang2024MP, @Wang2024COSI, @Wang2024COSI], Fourier Ptychographic Microscopy [@Wang2024COSI, @Chen2024ODF, @Chen2024FiO] and more. The differentiable ray-tracing framework has proven to be highly efficient and enables easy incorporation of neural networks, thereby promoting lens design.
 
-Please refer to the paper to find how this **differentiable imaging ($\partial \mathcal{I}$)**[[2](https://github.com/ni-chen/Differentiable-Imaging/blob/master/code/tutorial.ipynb)] enables more efficient and effective imaging, and our insights on its potential impact in the computational imaging field. Below is the supplementary code [[1](https://github.com/ni-chen/Differentiable-Imaging/blob/master/code/tutorial.ipynb)] of the paper[[2](https://github.com/ni-chen/Differentiable-Imaging/blob/master/code/tutorial.ipynb)]. 
+Please refer to the paper to find how this **differentiable imaging** [@Chen2023APR] enables more efficient and effective imaging, and our insights on its potential impact in the computational imaging field.
+
+![](./img/diff_img.png)
 
 ## Example 1: How to get the derivatives in PyTorch
 
 This is the code of the example in Fig. 3. We calculate $\frac{\partial y}{\partial x_1}$ and $\frac{\partial y}{\partial x_2}$ at $(x_1, x_2)=(2,1)$ for function of $y = \sin(x_1) + x_1 \times x_2$
 
-
-
-````python
+``` python
 import torch
 
 x1 = torch.tensor([2.])
@@ -73,11 +83,11 @@ print("partial v2: " + str(v2.grad.item()))
 print("partial v1: " + str(v1.grad.item()))
 print("partial v0: " + str(v0.grad.item()))
 print("partial vm: " + str(vm.grad.item()))
-````
+```
 
 The output is
 
-```bash
+``` bash
 partial v3: 1.0
 partial v2: 1.0
 partial v1: 1.0
@@ -87,15 +97,11 @@ partial vm: 0.5838531255722046
 
 ## Example 2: Optimize a phase from a diffraction pattern
 
-Suppose a diffraction pattern $y=\mathcal{P} \lbrace \exp( j \phi ) \rbrace$, we would like to get $\phi$ from $y$.
-We conduct two approaches:
-1. Optimize $\phi$ from $y$
-2. Optimize Zernike coefficients $c$ from $y$
-
+Suppose a diffraction pattern $y=\mathcal{P} \lbrace \exp( j \phi ) \rbrace$, we would like to get $\phi$ from $y$. We conduct two approaches: 1. Optimize $\phi$ from $y$ 2. Optimize Zernike coefficients $c$ from $y$
 
 ### Generate a diffraction image from an phase abberation
 
-```python
+``` python
 import torch
 from matplotlib import pyplot as plt
 import torch.optim as optim
@@ -161,10 +167,9 @@ Outputs:
 
 ![image-20230303111719693](./img/sys_images.png)
 
-
 ### Optimize phase directly
 
-```python
+``` python
 phi_pred = nn.Parameter(0.05*torch.rand([Nx, Ny], dtype=torch.double, requires_grad=True))
 
 loss_hist = []
@@ -208,9 +213,10 @@ plt.axis('off')
 plt.title('Prediction')
 plt.show()
 ```
+
 Outputs:
 
-```bash
+``` bash
 iter = 0: loss = 0.004936623673881058, d_phi=4.301339185275744e-23
 iter = 100: loss = 0.00010576813928532341, d_phi=-1.809457589959748e-25
 iter = 200: loss = 4.132147593978769e-05, d_phi=-5.363749284523539e-25
@@ -225,10 +231,9 @@ iter = 900: loss = 3.018650570046371e-06, d_phi=2.455692443516801e-25
 
 ![image-20230303111801035](./img/opt_phase.png)
 
-
-
 ### Optimize Zernike coefficients
-```python
+
+``` python
 def forward_model_coe(cz):
     phi_2d = cart.eval_grid(cz, matrix=True).transpose(0, 1).reshape((Nx, Ny))
 
@@ -290,7 +295,7 @@ plt.show()
 
 Outputs:
 
-```bash
+``` bash
 iter = 0: loss = 0.0030982286794401077, d_c=0.0005158085767899764
 iter = 100: loss = 3.3411678330592855e-08, d_c=-3.0584281452418886e-06
 iter = 200: loss = 1.0669258175797482e-12, d_c=2.6559282694650105e-09
@@ -302,27 +307,8 @@ iter = 700: loss = 1.6510196450632813e-09, d_c=-7.12309692154951e-07
 iter = 800: loss = 1.5200398003229252e-11, d_c=-2.3629464403681994e-08
 ```
 
-![image-20230303111822186](./img/opt_coe.png)
+![](./img/opt_coe.png)
 
-From this example, we show:
-- how to use automatic differentiation with PyTorch
-- by using automatic differentiation, we can easily apply various forward models. 
-- the quality of the resulting images is highly dependent on both the forward model used and the target we choose to optimize. 
+From this example, we show: - how to use automatic differentiation with PyTorch - by using automatic differentiation, we can easily apply various forward models. - the quality of the resulting images is highly dependent on both the forward model used and the target we choose to optimize.
 
-
------
-
-
-
-## Reference and related publications
-
-1. Tutorial code for developing differentiable optimization with PyTorch: [Jupyter notebook](https://github.com/ni-chen/Differentiable-Imaging/blob/master/code/tutorial.ipynb)
-2. Ni Chen, Liangcai Cao, Ting-Chung Poon, Byoungho Lee, Edmund Y. Lam, “[Differentiable Imaging: A New Tool for Computational Optical Imaging](https://onlinelibrary.wiley.com/doi/full/10.1002/apxr.202200118), ” Advanced Physcics Research 2(2), 2023.
-3. Ni Chen, Congli Wang and Wolfgang Heidrich, “[$\partial \mathcal{H}$: Differentiable Holography](https://doi.org/10.1002/lpor.202200828)”, Laser & Photonics Reviews, 2023.
-4. Congli Wang, Ni Chen and Wolfgang Heidrich, "[dO: A Differentiable Engine for Deep Lens Design of Computational Imaging Systems](https://ieeexplore.ieee.org/abstract/document/9919421)," IEEE Transactions on Computational Imaging, vol. 8, pp. 905-916, 2022.  [GitHub](https://github.com/vccimaging/DiffOptics)
-5. Congli Wang, Ni Chen, and Wolfgang Heidrich, "[Towards self-calibrated lens metrology by differentiable refractive deflectometry](https://opg.optica.org/oe/fulltext.cfm?uri=oe-29-19-30284&id=458455)," Opt. Express **29**, 30284-30295 (2021). [Github](https://github.com/vccimaging/DiffDeflectometry)
-6. Ni Chen, Congli Wang, and Wolfgang Heidrich, "[HTRSD: Hybrid Taylor Rayleigh-Sommerfeld diffraction](https://opg.optica.org/oe/fulltext.cfm?uri=oe-30-21-37727&id=507396)," Opt. Express **30**, 37727-37735 (2022)
-7. Xinge Yang and Qiang Fu and Wolfgang Heidrich, “[Curriculum Learning for ab initio Deep Learned Refractive Optics](https://arxiv.org/abs/2302.01089),” ArXiv, 2023.
-
-
-
+## References {.unnumbered}
