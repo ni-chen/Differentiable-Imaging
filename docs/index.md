@@ -326,5 +326,3 @@ From this example, we show:
 
 
 
-
-
