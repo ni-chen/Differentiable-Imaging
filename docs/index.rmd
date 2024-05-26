@@ -1,5 +1,5 @@
 ---
-# title: "Differentiable Imaging: a new tool for computational optical imaging"
+title: "Differentiable Imaging: a new tool for computational optical imaging"
 # date: "`r Sys.Date()`"
 output:
   # word_document: default
@@ -9,11 +9,11 @@ output:
   #   variant: markdown_github
   html_document:
     toc: true
+    toc_float: true
     pandoc_args: [
       "--number-sections",
       "--number-offset=1"
     ]
-    toc_float: true
     code_folding: show
     number_sections: true
 bibliography: pub.bib
@@ -23,7 +23,7 @@ csl: optics-express.csl
 
 <center>
 
-# Differentiable Imaging: a new tool for computational optical imaging {.unnumbered}
+<!-- # Differentiable Imaging: a new tool for computational optical imaging {.unnumbered} -->
 
 Advanced Physics Research, 2023
 
