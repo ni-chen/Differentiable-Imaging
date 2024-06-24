@@ -27,17 +27,19 @@ csl: optics-express.csl
 
 Advanced Physics Research, 2023
 
-<a href="https://ni-chen.github.io/" class="author">Ni Chen</a><sup>1</sup>, <a href="http://www.holoddd.com/" class="author">Liangcai Cao</a><sup>2</sup>, <a href="https://sites.google.com/vt.edu/oshandholographiclab/" class="author">T.-C. Poon</a><sup>3</sup>, <a href="http://oeqelab.snu.ac.kr/PROF" class="author">Byoungho Lee</a><sup>4</sup>, <a href="https://www.eee.hku.hk/~elam/" class="author">Edmund Y. Lam</a><sup>5</sup>
+<a href="https://ni-chen.github.io/" class="author">Ni Chen</a><sup>1,2</sup>, <a href="http://www.holoddd.com/" class="author">Liangcai Cao</a><sup>3</sup>, <a href="https://sites.google.com/vt.edu/oshandholographiclab/" class="author">T.-C. Poon</a><sup>4</sup>, <a href="http://oeqelab.snu.ac.kr/PROF" class="author">Byoungho Lee</a><sup>5</sup>, <a href="https://www.eee.hku.hk/~elam/" class="author">Edmund Y. Lam</a><sup>6</sup>
 
 <sup>1</sup> University of Arizona;
 
-<sup>2</sup> Tsinghua University;
+<sup>2</sup> King Abdullah University of Science and Technology;
 
-<sup>3</sup> Virginia Tech;
+<sup>3</sup> Tsinghua University;
 
-<sup>4</sup> Seoul National University;
+<sup>4</sup> Virginia Tech;
 
-<sup>5</sup> The University of Hong Kong;
+<sup>5</sup> Seoul National University;
+
+<sup>6</sup> The University of Hong Kong;
 
 </center>
 
