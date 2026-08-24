@@ -116,7 +116,8 @@ Since 2021, our exploration of differentiable imaging across various domains has
 
 | Techniques                                     | Uncertainties                                                | Achievements                                                 |
 | ---------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| **Differentiable Holography**[^6],[^5]         | Defocus distance; Complex light-wave interaction;            | Single-shot wavefield imaging; high-density Single-shot 3D PIV |
+| **Differentiable Diffraction**[^7]    | -           | Fast, precise, memory-efficient implementation of optical diffraction                       |
+| **Differentiable Holography**[^6],[^5]    | Defocus distance; Complex light-wave interaction;            | Single-shot wavefield imaging; high-density Single-shot 3D PIV |
 | **Differentiable Lensless Imaging**[^4]        | Sensor scanning positions; defocus distances;                | Pixel-super resolution; High-performance imaging; Compact and cost-effective hardware |
 | **Uncertainty-Aware Fourier Ptychography**[^3] | Modelable: misalignment, element aberrations; <br>Statistical: noise, low quality data | Simplified measurements; resolution beyond traditional physical limits; expanded system functions |
 
@@ -155,3 +156,5 @@ The potential of differentiable imaging extends well beyond its current applicat
 [^5]: Yang Wu, Jun Wang, Sigurdur Thoroddsen, Ni Chen*, "[Single-Shot High-Density Volumetric Particle Imaging Enabled by Differentiable Holography](https://ieeexplore.ieee.org/abstract/document/10660564)," IEEE Transactions on Industrial Informatics, 2024.
 
 [^6]: Ni Chen, Congli Wang, Wolfgang Heidrich, "[∂H: Differentiable Holography](https://onlinelibrary.wiley.com/doi/abs/10.1002/lpor.202200828)," Laser & Photonics Reviews, 2023.
+
+[^7]: Ni Chen*, Congli Wang, Wolfgang Heidrich, "[HTRSD: Hybrid Taylor Rayleigh-Sommerfeld diffraction](https://doi.org/10.1364/OE.471907)," Optics Express, 30 (21): 37727–37735, 2022.
